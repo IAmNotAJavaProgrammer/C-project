@@ -4,10 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.c \
-    test.c
+        main.c
 
 HEADERS += \
-    linklist.h
-
-DISTFILES +=
+    polynomial.h

@@ -1,4 +1,4 @@
-#include "linklist.h"
+#include "Singly_List.h"
 List CreateList ( List list ){
     list=malloc(sizeof (Node));
 
@@ -28,21 +28,18 @@ int IsLast( Position P ){
     return P ->next == NULL;
 }
 Position Find( List list , Emt_TYPE X ){
-    PtrToNode tmp = list ->next;
-    Position retn = NULL;
-    for( tmp = list ->next; !IsLast( tmp );tmp = tmp ->next){
-        if(tmp ->value == X){
-            retn = tmp;
-        }
-    }
-    return retn;
+    PtrToNode tmp=NULL;
+    if(FindPrevious(list,X) !=NULL)
+        tmp=FindPrevious(list,X) ->next;
+
+    return tmp;
 
 }
 Position FindPrevious( List list , Emt_TYPE X ){
     PtrToNode tmp = list;
     Position retn = NULL;
-    for( tmp = list; !IsLast(tmp ->next);tmp = tmp ->next){
-        if(tmp ->next ->value == X && tmp != list){
+    for( tmp = list ; !IsLast(tmp ->next);tmp = tmp ->next){
+        if(tmp ->next ->value == X){
             retn = tmp;
         }
     }

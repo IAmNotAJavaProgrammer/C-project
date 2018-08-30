@@ -4,10 +4,4 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.c \
-    test.c
-
-HEADERS += \
-    linklist.h
-
-DISTFILES +=
+        main.c

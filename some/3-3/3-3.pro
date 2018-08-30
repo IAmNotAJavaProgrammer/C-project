@@ -5,9 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
         main.c \
-    test.c
+    ../../LinkedList/Singly_List.c
 
 HEADERS += \
-    linklist.h
-
-DISTFILES +=
+    Singly_List.h

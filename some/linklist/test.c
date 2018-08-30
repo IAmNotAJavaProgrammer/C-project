@@ -20,5 +20,8 @@ int main(){
         printf("%d", P ->value );
         P = P ->next;
     }
+
+    printf("pre=%d\n",Find( list , 1) ->value );
+    printf("%p\n",list);
     return 0;
 }
